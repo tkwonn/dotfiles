@@ -8,6 +8,7 @@ fi
 ###################################################
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
 ###################################################
+
 ZSH_THEME=""
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
@@ -40,6 +41,7 @@ setopt hist_ignore_space  # start [space], no history
 ########################################
 # zsh setting
 ########################################
+
 setopt auto_pushd         # $ cd ~[TAB]
 setopt correct            # command correction
 setopt inc_append_history # immediately pushing cmd to history
