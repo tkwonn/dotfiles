@@ -10,10 +10,6 @@ fi
 ###################################################
 
 ZSH_THEME=""
-fpath+=("$(brew --prefix)/share/zsh/site-functions")
-autoload -U promptinit; promptinit
-prompt pure
-
 plugins=(
     aws
     brew
@@ -26,6 +22,11 @@ plugins=(
     z
 )
 source $ZSH/oh-my-zsh.sh
+
+# pure prompt setting
+fpath+=("$(brew --prefix)/share/zsh/site-functions")
+autoload -U promptinit; promptinit
+prompt pure
 
 ########################################
 # history
