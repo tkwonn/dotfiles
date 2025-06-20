@@ -30,6 +30,10 @@ fpath+=("$(brew --prefix)/share/zsh/site-functions")
 autoload -U promptinit; promptinit
 prompt pure
 
+if [[ -x $(command -v gh) ]] && (( $+functions[compdef] )); then
+    eval "$(gh completion -s zsh)"
+fi
+
 ########################################
 # history
 ########################################

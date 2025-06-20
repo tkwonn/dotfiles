@@ -10,10 +10,6 @@ if [[ -x `which go` ]]; then
     export PATH=$PATH:$GOPATH/bin
 fi
 
-if [[ -x $(command -v gh) ]]; then
-  eval "$(gh completion -s zsh)"
-fi
-
 export COMPOSER_DIR="$HOME/.composer/vendor"
 export PATH="$PATH:${COMPOSER_DIR}/bin"
 
