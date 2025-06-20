@@ -5,6 +5,8 @@ if [ ! -d $ZSH ] ; then
     git clone --depth=1 https://github.com/robbyrussell/oh-my-zsh.git $ZSH
 fi
 
+autoload -Uz compinit && compinit
+
 ###################################################
 # https://github.com/robbyrussell/oh-my-zsh/blob/master/templates/zshrc.zsh-template
 ###################################################
@@ -22,7 +24,6 @@ plugins=(
     z
 )
 source $ZSH/oh-my-zsh.sh
-autoload -Uz compinit && compinit
 
 # pure prompt setting
 fpath+=("$(brew --prefix)/share/zsh/site-functions")
